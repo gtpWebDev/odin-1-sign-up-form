@@ -1,0 +1,56 @@
+/* this file deals with the form-container nad its contents */
+
+
+#form-container {
+  /* form is vertically central and does not flex */
+  /* min-height: var(--center-panel-height); */
+  
+  background-color: var(--backGroundColour);
+  flex: 0;
+  box-shadow: 0px 6px 5px rgb(220, 217, 217);
+  padding: 0 3vw 30px 3vw;
+
+}
+
+#form-title {
+  margin-bottom: 25px;
+}
+
+#form-content {
+  max-width: 600px; /* ensures 2 inputs per row max */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px 50px;
+}
+
+
+
+.form-label {
+  font-size: 14px;
+  padding-left: 2px;
+  font-weight: 500;
+}
+
+.form-input {
+  border: 0.5px solid rgb(222, 233, 222);
+  border-radius: 5px;
+  width: 230px;
+  font-size: 16px;
+  padding-left: 8px;
+  height: 25px;
+  text-align: left;
+
+}
+
+.form-input:focus {
+  outline: 1.5px solid rgb(81, 144, 183);
+  box-shadow: 0px 3px 3px rgb(155, 193, 217);
+ 
+}
+
+#password-validation-text {
+  margin: 3px 0 0 0;
+  color: rgb(199, 52, 52);
+  font-size: 14px;
+}

@@ -1,0 +1,156 @@
+
+/*
+  known imperfections!::after
+  When the page is very small, the top-right (mainly) and bottom-right panes
+  have the potential of overflowing out of the page
+
+  The password validation isn't as together as it should be, it's possible to submit
+  whether they match or not. I'm waiting until custom client-side validation is covered  in the course
+  to deal with this thoroughly.
+
+*/
+
+
+
+:root {
+  --backGroundColour: #ffffff; /* exclusive to backgrounds */
+  --borderColour: #000000; /* exclusive to borders */
+
+  --lightTextColour: #f8f1e4; /* for use on dark backgrounds */
+  --darkTextColour: #1f0000; /* for use on light backgrounds */
+
+  --lightestColour: #f9f7f3;
+  --midLightColour: #aaa8af;
+  --midColour: #c1121f;
+  --midDarkColour: #780000;
+  --darkestColour: #003049;
+  
+  --image-width-perc: 40vw;
+
+  --banner-height: 15vh;
+
+  --font-hierarchy: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+@font-face {
+  font-family: norse-bold;
+  src: url(./fonts/Norse-Bold.otf)
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-hierarchy);
+}
+
+h1 {
+  font-size: calc(20px + 0.6vw);
+}
+
+#top-container {
+  background-color: var(--midLightColour);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#left-image {
+  width: var(--image-width-perc);
+  height: 100vh;
+  text-align: center;
+  background-image: url(./img/eugene-ga-aL2jP0vi8nk-unsplash.jpg);
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 1;
+  
+}
+
+#banner-background {
+  position: absolute;
+  top: 25vh;
+  left: 0;
+  height: var(--banner-height);
+  width: var(--image-width-perc);
+  background-color: rgb(0, 0, 0);
+  opacity: 0.3;
+  z-index: 2;
+}
+
+#banner-foreground {
+  position: absolute;
+  top: 25vh;
+  left: 0;
+  height: var(--banner-height);
+  width: var(--image-width-perc);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+#banner-icon {
+  margin-top: 1.5vh;
+  /* font size generally half height of banner, but scaled down as page narrows */
+  height: calc(min(0.7 * var(--banner-height),10vw));
+}
+
+#banner-title {
+  font-family: norse-bold;
+  font-variant: small-caps;
+  /* font size generally half height of banner, but scaled down as page narrows */
+  font-size: calc(min(0.6*var(--banner-height),10vw));
+}
+
+
+#right-panel {
+  width: calc(100% - var(--image-width-perc));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  background-color: var(--lightestColour);
+  /*  central form panel always centred, minimum height,
+      top and bottom extending as space becomes available
+  */
+  --center-panel-height: 350px;
+  --top-and-bottom-panel-heights: calc((60% - var(--center-panel-height))/2)
+
+}
+
+#strapline {
+  background-color: var(--lightestColour);
+  padding: 40px 3vw;
+  height: var(--top-and-bottom-panel-heights);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;;
+  align-items: stretch;
+
+}
+
+#account-creation {
+  /* want strap-line and create-account to flex evenly */
+  background-color: var(--lightestColour);
+  height: var(--top-and-bottom-panel-heights);
+  padding: 30px 3vw;
+}
+
+button#create-account-button {
+  height: 50px;
+  width: 200px;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  background-color: rgb(47, 97, 47);
+  margin-bottom: 15px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: rgb(47, 97, 47)
+}
+
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-up Form - Odin Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="form-styles.css">
+  <script src="index.js" defer></script>
+  
+</head>
+<body>
+  
+  <div id="top-container">
+
+    <div id="left-image">
+      <div id="banner-background">ddd</div>
+      <div id="banner-foreground">
+        <img id="banner-icon" src="./img/noun-oasis-3890956.svg" alt="pretty-icon">
+        <h2 id="banner-title">gtpWebDev</h2>
+
+      </div>
+    </div>
+
+    <div id="right-panel">
+      <div id="strapline">
+        <h1>
+          This is not a real online service. I would recommend not signing up; any refusal to heed this advice may result in an unfortunate but predictable downturn in your circumstances...
+        </h1>
+        <h1>
+          Actually, don't worry, please sign up, I have bills to pay
+        </h1>
+
+      </div>
+
+      <div id="form-container">
+        <div id="form-title">
+          <h1>Let's do this!</h1>
+        </div>
+        
+        <form id="create-account-form" action="https://httpbin.org/post" method="post">
+
+          <div id="form-content">
+
+            <div class="form-item">
+              <label class="form-label" for="first-name">FIRST NAME
+              <br>
+              <input class="form-input" type="text" id="first-name" name="first-name" required>
+              </label>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label" for="last-name">LAST NAME
+                <br>
+                <input class="form-input" type="text" id="last-name" name="last-name" required>
+              </label>
+            </div>
+            
+            <div class="form-item">
+              <label class="form-label" for="email">EMAIL
+                <br>
+                <input class="form-input" type="email" id="email" name="email" required>
+              </label>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label" for="phone-number">PHONE NUMBER
+                <br>
+                <input class="form-input" type="number" id="phone-number" name="phone-number" required>
+              </label>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label" for="first-name">PASSWORD
+              <br>
+              <input class="form-input" type="password" id="password" name="password" minlength=8 required>
+              </label>
+            </div>
+          
+            <div class="form-item">
+              <label class="form-label" for="first-name">CONFIRM PASSWORD
+              <br>
+              <input class="form-input" type="password" id="confirm-password" name="confirm-password" minlength=8 required>
+              </label>
+              <p id="password-validation-text">Please enter a password</p>
+            </div>
+  
+
+        </div>
+
+      </form>
+
+      </div>
+
+      <div id="account-creation">
+        <button id="create-account-button" form="create-account-form" type="submit">Create Account</button>
+        <p>Already have an account? <a href="" style="font-weight: 800">Log in</a></p>
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+</body>
+</html>
